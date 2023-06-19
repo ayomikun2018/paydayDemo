@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import img1 from "../../assets/landingPage/Frame 2.svg";
 import img2 from "../../assets/landingPage/Frame 2 (1).svg";
 import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
+import { Link } from "react-router-dom";
 export default function LandingPage() {
   return (
     <>
@@ -32,9 +33,9 @@ export default function LandingPage() {
           </p>
         </div>
         <div className="mt-[18px] flex flex-row gap-[24px] justify-center items-center ">
-          <button className=" md:block p-3 px-6 pt-2 w-36 text-white bg-orange rounded-full baseline hover:bg-blue space-x-6">
+          <Link to="/signIn"><button className=" md:block p-3 px-6 pt-2 w-36 text-white bg-orange rounded-full baseline hover:bg-blue space-x-6">
             Get Started
-          </button>
+          </button></Link>
           <button className=" md:block p-3 pt-2 w-40 text-white bg-blue rounded-full baseline hover:bg-orange space-x-6">
             <VideocamRoundedIcon />
             Learn More
