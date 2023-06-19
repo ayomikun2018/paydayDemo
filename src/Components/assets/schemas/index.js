@@ -1,6 +1,7 @@
 import * as yup from "yup";
 const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 const phoneRules = /^\+?[1-9][0-9]{7,14}$/;
+
 export const signInSchema = yup.object().shape({
   email: yup.string().email("Please enter a valid email").required("Required"),
   // age: yup.number().positive().integer().required("Required"),
@@ -10,6 +11,7 @@ export const signInSchema = yup.object().shape({
     .matches(passwordRules, { message: "Please create a stronger password" })
     .required("Required"),
 });
+
 export const signUpSchema = yup.object().shape({
   email: yup.string().email("Please enter a valid email").required("Required"),
   firstName: yup
